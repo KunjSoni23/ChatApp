@@ -12,13 +12,13 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 
 firebase.initializeApp({
   //your config
-  apiKey: "AIzaSyDIFpSLJfVs9RORAER2uC7_HVYHMRmKv-c",
-  authDomain: "fir-chatapp-fafa4.firebaseapp.com",
-  databaseURL: "https://fir-chatapp-fafa4.firebaseio.com",
-  projectId: "fir-chatapp-fafa4",
-  storageBucket: "fir-chatapp-fafa4.appspot.com",
-  messagingSenderId: "865965607749",
-  appId: "1:865965607749:web:a31d57b7ef7f42d83e0c2c",
+  apiKey: "AIzaSyBMaBf-G55S-2MdSBet0FmYNRwQO5w32B8",
+  authDomain: "chatapp-373da.firebaseapp.com",
+  projectId: "chatapp-373da",
+  storageBucket: "chatapp-373da.appspot.com",
+  messagingSenderId: "825871631639",
+  appId: "1:825871631639:web:5b7dd6a35c7f7fa1ece352",
+  measurementId: "G-RVVJ32LWZK",
 });
 
 const auth = firebase.auth();
