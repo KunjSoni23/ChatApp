@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-
 import "./App.css";
 
 import firebase from "firebase/app";
@@ -31,6 +30,7 @@ function App() {
   return (
     <div className="App">
       <header>
+        <h2>Chat App</h2>
         <h1>⚛️🔥💬</h1>
         <SignOut />
       </header>

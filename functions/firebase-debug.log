@@ -1,0 +1,50 @@
+[debug] [2021-06-26T02:59:58.139Z] ----------------------------------------------------------------------
+[debug] [2021-06-26T02:59:58.141Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\sonik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2021-06-26T02:59:58.142Z] CLI Version:   9.14.0
+[debug] [2021-06-26T02:59:58.142Z] Platform:      win32
+[debug] [2021-06-26T02:59:58.142Z] Node Version:  v16.1.0
+[debug] [2021-06-26T02:59:58.143Z] Time:          Fri Jun 25 2021 22:59:58 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-06-26T02:59:58.143Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-26T02:59:58.151Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-26T02:59:58.151Z] > authorizing via signed-in user (destroyerblackhood2302@gmail.com)
+[debug] [2021-06-26T02:59:58.152Z] [iam] checking project fir-chatapp-fafa4 for permissions ["firebase.projects.get"]
+[debug] [2021-06-26T02:59:58.153Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-chatapp-fafa4:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-06-26T02:59:59.829Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 26 Jun 2021 03:00:00 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=158","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "14" doesn't match your global version "16" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"14\" doesn't match your global version \"16\""}}
+[debug] [2021-06-26T03:00:00.000Z] defaultcredentials: writing to file C:\Users\sonik\AppData\Roaming\firebase\destroyerblackhood2302_gmail_com_application_default_credentials.json
+[debug] [2021-06-26T03:00:00.003Z] DEBUG: Setting GAC to C:\Users\sonik\AppData\Roaming\firebase\destroyerblackhood2302_gmail_com_application_default_credentials.json
+[debug] [2021-06-26T03:00:00.006Z] > refreshing access token with scopes: []
+[debug] [2021-06-26T03:00:00.006Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-26T03:00:00.142Z] <<< HTTP RESPONSE 200 {"date":"Sat, 26 Jun 2021 03:00:00 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-26T03:00:00.290Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-chatapp-fafa4/adminSdkConfig [none]
+[debug] [2021-06-26T03:00:00.570Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-chatapp-fafa4/adminSdkConfig 200
+[debug] [2021-06-26T03:00:00.570Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-chatapp-fafa4/adminSdkConfig {"projectId":"fir-chatapp-fafa4","databaseURL":"https://fir-chatapp-fafa4-default-rtdb.firebaseio.com","storageBucket":"fir-chatapp-fafa4.appspot.com","locationId":"us-central"}
+[debug] [2021-06-26T03:00:00.624Z] [functions] Watching "C:\ChatApp\chat-app\functions" for Cloud Functions...
+[debug] [2021-06-26T03:00:00.727Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2021-06-26T03:00:00.727Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2021-06-26T03:00:00.728Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2021-06-26T03:00:00.728Z] DEBUG: [worker-~diagnostic~-88f032dc-e11e-429f-a8b2-b3dc75ecfe91]: Assigning socketPath: \\?\pipe\C:\ChatApp\chat-app\functions\12068
+[debug] [2021-06-26T03:00:00.728Z] DEBUG: [worker-~diagnostic~-88f032dc-e11e-429f-a8b2-b3dc75ecfe91]: BUSY
+[info] >  Debugger attached. {"user":"Debugger attached.\r","metadata":{"emulator":{"name":"functions"},"message":"\u001b[90m> \u001b[39m Debugger attached.\r"}}
+[debug] [2021-06-26T03:00:01.629Z] DEBUG: [runtime-status] [12068] Functions runtime initialized. {"cwd":"C:\\ChatApp\\chat-app\\functions","node_version":"16.1.0"}
+[debug] [2021-06-26T03:00:01.631Z] DEBUG: [runtime-status] [12068] Disabled runtime features: undefined
+[debug] [2021-06-26T03:00:01.648Z] DEBUG: [runtime-status] [12068] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.10.0","resolution":"C:\\ChatApp\\chat-app\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2021-06-26T03:00:01.720Z] DEBUG: [runtime-status] [12068] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"C:\\ChatApp\\chat-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-26T03:00:01.722Z] DEBUG: [runtime-status] [12068] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"C:\\ChatApp\\chat-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-26T03:00:01.723Z] DEBUG: [runtime-status] [12068] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-06-26T03:00:01.724Z] DEBUG: [runtime-status] [12068] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"C:\\ChatApp\\chat-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-26T03:00:03.375Z] DEBUG: [runtime-status] [12068] Checked functions.config() {"config":{}}
+[debug] [2021-06-26T03:00:03.376Z] DEBUG: [runtime-status] [12068] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.14.1","resolution":"C:\\ChatApp\\chat-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2021-06-26T03:00:03.377Z] DEBUG: [runtime-status] [12068] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"C:\\ChatApp\\chat-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-26T03:00:03.380Z] DEBUG: [runtime-status] [12068] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.10.0","resolution":"C:\\ChatApp\\chat-app\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2021-06-26T03:00:03.381Z] DEBUG: [runtime-status] [12068] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"C:\\ChatApp\\chat-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-26T03:00:03.382Z] DEBUG: [runtime-status] [12068] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.10.0","resolution":"C:\\ChatApp\\chat-app\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2021-06-26T03:00:03.578Z] DEBUG: [runtime-status] [12068] initializeApp(DEFAULT) {"storageBucket":"fir-chatapp-fafa4.appspot.com","databaseURL":"https://fir-chatapp-fafa4-default-rtdb.firebaseio.com","projectId":"fir-chatapp-fafa4"}
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2021-06-26T03:00:05.288Z] [functions[us-central1-detectEvilUsers]] function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions: Loaded functions: detectEvilUsers 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage 
+[debug] [2021-06-26T03:00:05.327Z] DEBUG: [worker-~diagnostic~-88f032dc-e11e-429f-a8b2-b3dc75ecfe91]: IDLE
