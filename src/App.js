@@ -9,6 +9,12 @@ import "firebase/analytics";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
+import { FiSend } from "react-icons/fi";
+import { FaSignOutAlt } from "react-icons/fa";
+import { Button } from "react-bootstrap";
+
+import tinymce from "tinymce/tinymce";
+
 firebase.initializeApp({
   //your config
   apiKey: "AIzaSyBMaBf-G55S-2MdSBet0FmYNRwQO5w32B8",
@@ -30,8 +36,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h2>Chat App</h2>
-        <h1>⚛️🔥💬</h1>
+        <h2>⚛️🔥💬</h2>
         <SignOut />
       </header>
 
@@ -48,10 +53,15 @@ function SignIn() {
 
   return (
     <>
-      <button className="sign-in" onClick={signInWithGoogle}>
-        Sign in with Google
-      </button>
-      <p>
+      <Button
+        onClick={signInWithGoogle}
+        className="sign-in-button"
+        variant="primary"
+        size="xxl"
+      >
+        Sign In With Google
+      </Button>{" "}
+      <p className="startup-message">
         Do not violate the community guidelines or you will be banned for life!
       </p>
     </>
@@ -62,7 +72,8 @@ function SignOut() {
   return (
     auth.currentUser && (
       <button className="sign-out" onClick={() => auth.signOut()}>
-        Sign Out
+        {/* <Icon circular name="sign-out" /> */}
+        <FaSignOutAlt />
       </button>
     )
   );
@@ -93,6 +104,13 @@ function ChatRoom() {
     dummy.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  tinymce.init({
+    selector: "#mytextarea",
+    plugins: "emoticons",
+    toolbar: "emoticons",
+    toolbar_location: "bottom",
+    menubar: false,
+  });
   return (
     <>
       <main>
@@ -103,16 +121,21 @@ function ChatRoom() {
       </main>
 
       <form onSubmit={sendMessage}>
-        <input
+        <textarea
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
-          placeholder="say something nice"
+          placeholder="Type Your Message"
         />
 
         <button type="submit" disabled={!formValue}>
-          🕊️
+          <FiSend />
         </button>
       </form>
+
+      <script
+        src="https://cdn.tiny.cloud/1/2kjgann8fhr9wgtmavgfpqzueqigun0ps4zwak6j513s8fse/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"
+      ></script>
     </>
   );
 }
